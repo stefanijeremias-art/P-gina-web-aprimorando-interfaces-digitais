@@ -1,157 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empatia & Compreensão</title>
+
+    <title>Mais Empatia ❤️</title>
+
     <style>
-        /* --- ESTILOS (CSS) --- */
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff7f2;
+            color: #444;
+            text-align: center;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        header {
+            background: #ffb6a3;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .conteudo {
+            max-width: 700px;
+            margin: 30px auto;
             padding: 20px;
         }
 
-        .card {
-            background-color: #ffffff;
-            max-width: 600px;
-            width: 100%;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #555;
-            font-size: 1.1rem;
+        .texto {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
             margin-bottom: 25px;
         }
 
-        .quote {
-            font-style: italic;
-            background-color: #eef9f6;
-            border-left: 4px solid #42b883;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 30px;
-            color: #2c5d46;
+        h2 {
+            color: #e9826b;
         }
 
-        /* Botão de Like */
-        .like-section {
+        .beneficios {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 12px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .like-btn {
-            background-color: #e74c3c;
+        .beneficio {
+            background: white;
+            padding: 20px;
+            width: 180px;
+            border-radius: 15px;
+        }
+
+        .beneficio h3 {
+            color: #e9826b;
+        }
+
+        button {
+            background: #e9826b;
             color: white;
             border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 30px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 17px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.2s, background-color 0.2s;
         }
 
-        .like-btn:hover {
-            background-color: #c0392b;
-            transform: scale(1.05);
+        button:hover {
+            background: #d96d56;
         }
 
-        .like-btn:active {
-            transform: scale(0.95);
+        #curtidas {
+            margin-top: 10px;
         }
 
-        .counter {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #444;
-            background: #f0f0f0;
-            padding: 10px 18px;
-            border-radius: 20px;
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #444;
+            color: white;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- --- CONTEÚDO (HTML) --- -->
-    <main class="card">
-        <div class="icon">🌱</div>
-        <h1>Empatia & Compreensão</h1>
-        
-        <p>
-            Empatia é a capacidade de se colocar no lugar do outro, escutar sem julgar e compreender suas emoções. Quando praticamos a compreensão mútua, construímos pontes e criamos um mundo mais acolhedor para todos.
-        </p>
+    <header>
+        <h1>❤️ Mais Empatia</h1>
+        <p>Ouvir, entender e respeitar faz a diferença.</p>
+    </header>
 
-        <div class="quote">
-            "A empatia é ver com os olhos de outro, ouvir com os ouvidos de outro e sentir com o coração de outro."
+    <div class="conteudo">
+
+        <div class="texto">
+            <h2>O que é empatia?</h2>
+            <p>
+                É tentar entender o que outra pessoa está sentindo,
+                mesmo quando pensamos diferente.
+            </p>
+
+            <p>
+                Às vezes, tudo que alguém precisa é de alguém que escute.
+            </p>
         </div>
 
-        <div class="like-section">
-            <button class="like-btn" id="btnLike">
-                ❤️ Curtir
-            </button>
-            <span class="counter" id="likeCount">0 curtidas</span>
-        </div>
-    </main>
+        <h2>Por que a empatia é importante?</h2>
 
-    <!-- --- FUNCIONALIDADE DO CONTADOR (JAVASCRIPT) --- -->
+        <div class="beneficios">
+
+            <div class="beneficio">
+                <h3>❤️ Respeito</h3>
+                <p>Aprendemos a respeitar as diferenças.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>🤝 Amizade</h3>
+                <p>Construímos relações mais verdadeiras.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>😊 Felicidade</h3>
+                <p>Um pouco de carinho pode melhorar o dia de alguém.</p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 35px;">
+            <h2>Você também acredita nisso?</h2>
+
+            <button onclick="curtir()">❤️ Eu apoio</button>
+
+            <p id="curtidas">0 pessoas apoiam</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Um pequeno gesto pode fazer uma grande diferença. ❤️</p>
+    </footer>
+
     <script>
-        let count = 0;
-        const btnLike = document.getElementById('btnLike');
-        const likeCount = document.getElementById('likeCount');
+        let curtidas = 0;
 
-        btnLike.addEventListener('click', () => {
-            count++;
-            likeCount.textContent = `${count} ${count === 1 ? 'curtida' : 'curtidas'}`;
-        });
+        function curtir() {
+            curtidas++;
+            document.getElementById("curtidas").innerText =
+                curtidas + " pessoas apoiam";
+        }
     </script>
 
 </body>
-</html>  
- </h2>
-       <h2>O PODER DA ESCUTA E DA PRESENÇA</h2>
-       
-       <p> Silêncio acolhedor: Compreender começa quando calamos nossos próprios preconceitos para dar espaço à voz do outro.</p>  
-       <p>Presença verdadeira: Estar presente significa validar a dor alheia sem tentar minimizá-la ou apressar a cura.</p>
-       <p>Lutas invisíveis: Cada pessoa que cruza o nosso caminho carrega batalhas que desconhecemos; a gentileza deve ser a regra.</p>
-
-
-       <h2>CAMINHOS PRA PRATICAR EMPATIA</h2>
-
-       <p>Suspender o julgamento: Trocar a crítica imediata pela tentativa genuína de entender o contexto do outro.</p>
-       <p>Conexão emocional: Sentir com o outro, reconhecendo suas emoções sem focar apenas em si mesmo.</p>
-       <p>Acolhimento prático: Oferecer ajuda real e um ombro amigo nos momentos de vulnerabilidade.</p>
-       <p>A empatia e a compreensão são pontes invisíveis que conectam corações. Elas exigem a escuta atenta, o abandono de julgamentos precipitados e a coragem de enxergar o mundo sob a perspectiva alheia, transformando o modo como nos relacionamos com o sofrimento e com a alegria do outro.</p>
+</html>
+    
