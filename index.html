@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,153 +8,451 @@
     <title>Mais Empatia ❤️</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff7f2;
-            color: #444;
-            text-align: center;
-            margin: 0;
+        * {
+            box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8f5;
+            color: #4a4a4a;
+        }
+
+        /* CABEÇALHO */
         header {
-            background: #ffb6a3;
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #f6a894, #e98570);
             color: white;
+            text-align: center;
+            padding: 70px 20px;
         }
 
         header h1 {
-            font-size: 35px;
-            margin-bottom: 10px;
+            font-size: 45px;
+            margin: 0 0 15px;
         }
 
-        .conteudo {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 20px;
+        header p {
+            font-size: 19px;
+            margin: 0 auto 25px;
+            max-width: 600px;
         }
 
-        .texto {
+        .botao-menu {
+            display: inline-block;
+            text-decoration: none;
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 25px;
+            color: #df806b;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        /* CONTEÚDO */
+        .conteudo {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 55px;
         }
 
         h2 {
-            color: #e9826b;
+            color: #df806b;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* SOBRE EMPATIA */
+        .texto {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .texto p {
+            max-width: 750px;
+            margin: 12px auto;
+        }
+
+        /* FRASE */
+        .frase {
+            background: #ffe5dc;
+            padding: 35px 25px;
+            border-radius: 20px;
+        }
+
+        .frase p {
+            font-size: 22px;
+            font-style: italic;
+            color: #9b5c4d;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* BENEFÍCIOS */
         .beneficios {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-top: 25px;
         }
 
         .beneficio {
             background: white;
-            padding: 20px;
-            width: 180px;
-            border-radius: 15px;
+            width: 270px;
+            padding: 28px 22px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .beneficio:hover {
+            transform: translateY(-7px);
+        }
+
+        .icone {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
         .beneficio h3 {
-            color: #e9826b;
+            color: #df806b;
+            margin: 10px 0;
+        }
+
+        /* COMO PRATICAR */
+        .dicas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+
+        .dica {
+            background: white;
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .dica strong {
+            color: #df806b;
+            font-size: 18px;
+        }
+
+        /* APOIO */
+        .apoio {
+            background: linear-gradient(135deg, #ffe5dc, #fff0eb);
+            padding: 40px 20px;
+            border-radius: 20px;
         }
 
         button {
-            background: #e9826b;
+            background: #df806b;
             color: white;
             border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 14px 30px;
+            border-radius: 30px;
             font-size: 17px;
             cursor: pointer;
+            transition: 0.2s;
         }
 
         button:hover {
-            background: #d96d56;
+            background: #c96d59;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
         }
 
         #curtidas {
-            margin-top: 10px;
+            color: #777;
+            margin-top: 12px;
         }
 
+        /* RODAPÉ */
         footer {
-            margin-top: 30px;
-            padding: 20px;
-            background: #444;
+            background: #3f3f3f;
             color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 55px 20px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .texto {
+                padding: 25px 20px;
+            }
+
+            .beneficio {
+                width: 100%;
+            }
+
+            .dicas {
+                grid-template-columns: 1fr;
+            }
+
+            .frase p {
+                font-size: 19px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
+
         <h1>❤️ Mais Empatia</h1>
-        <p>Ouvir, entender e respeitar faz a diferença.</p>
+
+        <p>
+            Ouvir, compreender e respeitar pode mudar
+            o dia de alguém.
+        </p>
+
+        <a href="#empatia" class="botao-menu">
+            Conheça mais
+        </a>
+
     </header>
 
-    <div class="conteudo">
 
-        <div class="texto">
+    <main class="conteudo">
+
+        <!-- O QUE É EMPATIA -->
+        <section id="empatia" class="texto">
+
             <h2>O que é empatia?</h2>
+
             <p>
-                É tentar entender o que outra pessoa está sentindo,
-                mesmo quando pensamos diferente.
+                Empatia é a capacidade de tentar entender
+                o que outra pessoa está sentindo ou vivendo.
             </p>
 
             <p>
-                Às vezes, tudo que alguém precisa é de alguém que escute.
+                Não precisamos pensar igual para respeitar
+                alguém. Às vezes, tudo que uma pessoa precisa
+                é ser ouvida e saber que não está sozinha.
             </p>
-        </div>
 
-        <h2>Por que a empatia é importante?</h2>
+            <p>
+                Ter empatia é olhar para o outro com respeito,
+                paciência e humanidade.
+            </p>
 
-        <div class="beneficios">
+        </section>
 
-            <div class="beneficio">
-                <h3>❤️ Respeito</h3>
-                <p>Aprendemos a respeitar as diferenças.</p>
+
+        <!-- FRASE -->
+        <section class="frase">
+
+            <p>
+                "Antes de julgar alguém, tente entender
+                a história que essa pessoa está vivendo."
+            </p>
+
+        </section>
+
+
+        <!-- BENEFÍCIOS -->
+        <section>
+
+            <h2>Por que a empatia é importante?</h2>
+
+            <p>
+                Pequenos gestos de compreensão podem melhorar
+                nossos relacionamentos e nossa convivência.
+            </p>
+
+            <div class="beneficios">
+
+                <div class="beneficio">
+
+                    <div class="icone">❤️</div>
+
+                    <h3>Respeito</h3>
+
+                    <p>
+                        Aprendemos a respeitar opiniões,
+                        sentimentos e diferenças.
+                    </p>
+
+                </div>
+
+
+                <div class="beneficio">
+
+                    <div class="icone">🤝</div>
+
+                    <h3>Relacionamentos</h3>
+
+                    <p>
+                        A empatia ajuda a construir relações
+                        mais sinceras e saudáveis.
+                    </p>
+
+                </div>
+
+
+                <div class="beneficio">
+
+                    <div class="icone">😊</div>
+
+                    <h3>Bem-estar</h3>
+
+                    <p>
+                        Ser gentil e acolhedor pode fazer
+                        alguém se sentir melhor.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="beneficio">
-                <h3>🤝 Amizade</h3>
-                <p>Construímos relações mais verdadeiras.</p>
+        </section>
+
+
+        <!-- COMO PRATICAR -->
+        <section>
+
+            <h2>Como praticar a empatia?</h2>
+
+            <div class="dicas">
+
+                <div class="dica">
+                    <strong>👂 Escute de verdade</strong>
+                    <p>
+                        Preste atenção quando alguém estiver
+                        falando. Nem sempre é necessário dar
+                        conselhos.
+                    </p>
+                </div>
+
+                <div class="dica">
+                    <strong>💬 Escolha suas palavras</strong>
+                    <p>
+                        Pense antes de falar. Uma palavra
+                        gentil pode fazer uma grande diferença.
+                    </p>
+                </div>
+
+                <div class="dica">
+                    <strong>🤔 Tente entender</strong>
+                    <p>
+                        Antes de julgar uma pessoa, tente
+                        imaginar o que ela pode estar passando.
+                    </p>
+                </div>
+
+                <div class="dica">
+                    <strong>❤️ Seja gentil</strong>
+                    <p>
+                        Pequenos gestos, como perguntar
+                        "você está bem?", podem significar muito.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="beneficio">
-                <h3>😊 Felicidade</h3>
-                <p>Um pouco de carinho pode melhorar o dia de alguém.</p>
-            </div>
+        </section>
 
-        </div>
 
-        <div style="margin-top: 35px;">
-            <h2>Você também acredita nisso?</h2>
+        <!-- APOIO -->
+        <section class="apoio">
 
-            <button onclick="curtir()">❤️ Eu apoio</button>
+            <h2>Vamos espalhar mais empatia?</h2>
 
-            <p id="curtidas">0 pessoas apoiam</p>
-        </div>
+            <p>
+                Se você acredita que o mundo precisa de
+                mais compreensão, deixe seu apoio. ❤️
+            </p>
 
-    </div>
+            <button onclick="curtir()">
+                ❤️ Eu apoio
+            </button>
 
+            <p id="curtidas">
+                0 pessoas apoiam
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
     <footer>
-        <p>Um pequeno gesto pode fazer uma grande diferença. ❤️</p>
+
+        <p>
+            ❤️ Mais Empatia, Mais Compreensão
+        </p>
+
+        <p>
+            Um pequeno gesto pode fazer uma grande diferença.
+        </p>
+
     </footer>
 
+
     <script>
+
         let curtidas = 0;
 
         function curtir() {
+
             curtidas++;
-            document.getElementById("curtidas").innerText =
-                curtidas + " pessoas apoiam";
+
+            if (curtidas === 1) {
+
+                document.getElementById("curtidas").innerText =
+                    "1 pessoa apoia";
+
+            } else {
+
+                document.getElementById("curtidas").innerText =
+                    curtidas + " pessoas apoiam";
+
+            }
+
         }
+
     </script>
 
 </body>
+
 </html>
-    
